@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{0708F5E8-4A95-41C7-986D-CCB1B79F0C6F}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Host", "RentACar.Host\RentACar.Host.csproj", "{87BA9CEE-0A5F-436C-9CCF-CAA617A0B3EE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Models", "Models\RentACar.Models.csproj", "{D804550F-DE00-469A-97C0-14490867FFB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{D6D82293-55B8-46E4-847C-F6DB56891C7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Contracts", "RentACar.Contracts\RentACar.Contracts.csproj", "{50A10E35-1FCB-41FF-B426-1EBD3C2B19F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{D804550F-DE00-469A-97C0-14490867FFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D804550F-DE00-469A-97C0-14490867FFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D804550F-DE00-469A-97C0-14490867FFB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A10E35-1FCB-41FF-B426-1EBD3C2B19F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A10E35-1FCB-41FF-B426-1EBD3C2B19F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A10E35-1FCB-41FF-B426-1EBD3C2B19F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A10E35-1FCB-41FF-B426-1EBD3C2B19F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{90D87FB3-E9A0-4212-A910-07AFE920E543} = {5F26EC59-B5B1-41A3-9A2A-99036677F30A}
 		{87BA9CEE-0A5F-436C-9CCF-CAA617A0B3EE} = {0708F5E8-4A95-41C7-986D-CCB1B79F0C6F}
 		{D804550F-DE00-469A-97C0-14490867FFB2} = {EF29DC31-2FDD-45E8-B66A-19F24BF31250}
+		{50A10E35-1FCB-41FF-B426-1EBD3C2B19F6} = {D6D82293-55B8-46E4-847C-F6DB56891C7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CD1A65A-B893-48C8-A845-6C9B1B1E2A88}

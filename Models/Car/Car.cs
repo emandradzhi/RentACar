@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentACar.Models.Helpers;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace RentACar.Models
@@ -25,9 +26,12 @@ namespace RentACar.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "End Date")]
         public DateTime RentTo { get; set; }
-        
+
+        [Display(Name = "Image")]
         public string ImageUrl { get; set; }
-        public bool IsAvailable { get; set; } 
+
+        [Display(Name = "Availablity")]
+        public IsCarAvailable IsCarAvailable { get; set; }
 
         public int? PlaceId { get; set; }
 

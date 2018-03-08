@@ -1,0 +1,9 @@
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\bin\Debug\netcoreapp2.0\RentACar.Contracts.deps.json
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\obj\Debug\netcoreapp2.0\RentACar.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\obj\Debug\netcoreapp2.0\RentACar.Contracts.AssemblyInfoInputs.cache
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\obj\Debug\netcoreapp2.0\RentACar.Contracts.AssemblyInfo.cs
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\obj\Debug\netcoreapp2.0\RentACar.Contracts.dll
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\obj\Debug\netcoreapp2.0\RentACar.Contracts.pdb
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Contracts\obj\Debug\netcoreapp2.0\RentACar.Contracts.csprojResolveAssemblyReference.cache

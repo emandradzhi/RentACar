@@ -38,11 +38,9 @@
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="IsAvailable" /> @Html.DisplayNameFor(model => model.IsAvailable)
-                    </label>
-                </div>
+                <label asp-for="IsCarAvailable" class="control-label"></label>
+                <select asp-for="IsCarAvailable" class="form-control"></select>
+                <span asp-validation-for="IsCarAvailable" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PlaceId" class="control-label"></label>

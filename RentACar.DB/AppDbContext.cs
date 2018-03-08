@@ -14,13 +14,13 @@ namespace RentACar.DB
 
         public DbSet<RentACar.Models.Car> Cars { get; set; }
         public DbSet<RentACar.Models.Place> Places { get; set; }
-        public DbSet<RentACar.Models.Customer> Customers { get; set; }
+        public DbSet<RentACar.Models.User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Car>().ToTable("Car");
             modelBuilder.Entity<Place>().ToTable("Place");
-            modelBuilder.Entity<Customer>().ToTable("Customer");
+            modelBuilder.Entity<User>().ToTable("User");
         }
 
     }

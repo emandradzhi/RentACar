@@ -54,7 +54,7 @@ namespace RentACar.Host.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsAvailable,PlaceId")] Car car)
+        public async Task<IActionResult> Create([Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsCarAvailable,PlaceId")] Car car)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace RentACar.Host.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsAvailable,PlaceId")] Car car)
+        public async Task<IActionResult> Edit(int id, [Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsCarAvailable,PlaceId")] Car car)
         {
             if (id != car.CarId)
             {

@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using RentACar.DB;
+using RentACar.Models.Helpers;
 using System;
 
 namespace RentACar.DB.Migrations
@@ -17,10 +18,10 @@ namespace RentACar.DB.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
+                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Models.Car", b =>
+            modelBuilder.Entity("RentACar.Models.Car", b =>
                 {
                     b.Property<int>("CarId")
                         .ValueGeneratedOnAdd();
@@ -30,7 +31,7 @@ namespace RentACar.DB.Migrations
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<bool>("IsAvailable");
+                    b.Property<int>("IsCarAvailable");
 
                     b.Property<string>("Model")
                         .IsRequired();
@@ -46,30 +47,7 @@ namespace RentACar.DB.Migrations
                     b.ToTable("Car");
                 });
 
-            modelBuilder.Entity("Models.Customer", b =>
-                {
-                    b.Property<int>("CustomerId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("CarId");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired();
-
-                    b.Property<string>("LastName")
-                        .IsRequired();
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired();
-
-                    b.Property<int?>("PlaceId");
-
-                    b.HasKey("CustomerId");
-
-                    b.ToTable("Customer");
-                });
-
-            modelBuilder.Entity("Models.Place", b =>
+            modelBuilder.Entity("RentACar.Models.Place", b =>
                 {
                     b.Property<int>("PlaceId");
 
@@ -85,6 +63,31 @@ namespace RentACar.DB.Migrations
                     b.HasKey("PlaceId");
 
                     b.ToTable("Place");
+                });
+
+            modelBuilder.Entity("RentACar.Models.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("CarId");
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired();
+
+                    b.Property<int?>("PlaceId");
+
+                    b.Property<int>("TypeOfUser");
+
+                    b.Property<string>("Username")
+                        .IsRequired();
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("User");
                 });
 #pragma warning restore 612, 618
         }
