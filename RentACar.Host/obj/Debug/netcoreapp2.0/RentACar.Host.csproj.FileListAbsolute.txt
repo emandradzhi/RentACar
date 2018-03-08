@@ -1,0 +1,15 @@
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Host.deps.json
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Host.runtimeconfig.json
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Host.runtimeconfig.dev.json
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Host.dll
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Host.pdb
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.csprojResolveAssemblyReference.cache
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.csproj.CoreCompileInputs.cache
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.AssemblyInfoInputs.cache
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.AssemblyInfo.cs
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.dll
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.pdb
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.DB.dll
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.DB.pdb
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Models.dll
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Models.pdb
