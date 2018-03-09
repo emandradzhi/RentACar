@@ -30,3 +30,5 @@ C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.pdb
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
+C:\Users\Емин\source\repos\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb

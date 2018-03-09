@@ -8,7 +8,18 @@ namespace RentACar.Models
 {
     public class Place
     {
-        
+        public Place()
+        {
+
+        }
+        public Place(int placeId, string name, string region, string country)
+        {
+            this.PlaceId = placeId;
+            this.Name = name;
+            this.Region = region;
+            this.Country = country;
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PlaceId { get; set; }
         [Required]

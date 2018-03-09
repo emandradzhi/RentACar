@@ -1,18 +1,12 @@
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.DB.deps.json
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.DB.dll
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.DB.pdb
-C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\RentACar.DB.csprojResolveAssemblyReference.cache
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\RentACar.DB.csproj.CoreCompileInputs.cache
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\RentACar.DB.AssemblyInfoInputs.cache
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\RentACar.DB.AssemblyInfo.cs
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\RentACar.DB.dll
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\RentACar.DB.pdb
-C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.Relational.xml
-C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.SqlServer.xml
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.Models.dll
 C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.Models.pdb
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.DB.deps.json
@@ -28,3 +22,5 @@ C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\R
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.DB\obj\Debug\netcoreapp2.0\RentACar.DB.pdb
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb
+C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
+C:\Users\Емин\source\repos\RentACar\RentACar.DB\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb

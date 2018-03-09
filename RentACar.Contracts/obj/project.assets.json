@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emin.mandradzhi\\.nuget\\packages\\": {},
+    "C:\\Users\\Емин\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\emin.mandradzhi\\Projects\\RentACar\\RentACar.Contracts\\RentACar.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\Емин\\source\\repos\\RentACar\\RentACar.Contracts\\RentACar.Contracts.csproj",
       "projectName": "RentACar.Contracts",
-      "projectPath": "C:\\Users\\emin.mandradzhi\\Projects\\RentACar\\RentACar.Contracts\\RentACar.Contracts.csproj",
-      "packagesPath": "C:\\Users\\emin.mandradzhi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emin.mandradzhi\\Projects\\RentACar\\RentACar.Contracts\\obj\\",
+      "projectPath": "C:\\Users\\Емин\\source\\repos\\RentACar\\RentACar.Contracts\\RentACar.Contracts.csproj",
+      "packagesPath": "C:\\Users\\Емин\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Емин\\source\\repos\\RentACar\\RentACar.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\emin.mandradzhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Емин\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -710,7 +710,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           }
         },

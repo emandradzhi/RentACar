@@ -9,6 +9,19 @@ namespace RentACar.Models
 {
     public class Car
     {
+        public Car()
+        {
+
+        }
+        public Car(string brand, string model, DateTime rentFrom, DateTime rentoTo, string imageUrl, IsCarAvailable isItavaliable)
+        {
+            this.Brand = brand;
+            this.Model = model;
+            this.RentFrom = rentFrom;
+            this.RentTo = rentoTo;
+            this.ImageUrl = imageUrl;
+            this.IsTheCarAvailable = isItavaliable;
+        }
         
         [Key]
         public int CarId { get; set; }

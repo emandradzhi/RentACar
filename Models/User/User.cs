@@ -5,6 +5,18 @@ namespace RentACar.Models
 {
     public class User
     {
+        public User()
+        {
+
+        }
+
+        public User(string username, string email, TypeOfUser typeOfUser, string phoneNumber, int? placeId, int? carId)
+        {
+            this.Username = username;
+            this.Email = email;
+            this.TypeOfUser = typeOfUser;
+            this.PhoneNumber = phoneNumber;
+        }
         
         [Key]
         public int UserId { get; set; }

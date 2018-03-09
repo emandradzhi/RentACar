@@ -1,5 +1,6 @@
 ﻿using RentACar.Models;
 using System;
+using System.IO;
 using System.Linq;
 
 namespace RentACar.DB
@@ -9,7 +10,7 @@ namespace RentACar.DB
         public static void Initialize(AppDbContext context)
         {
             context.Database.EnsureCreated();
-
+            
             if (context.Users.Any())
             {
                 return;
@@ -18,16 +19,16 @@ namespace RentACar.DB
             var cars = new Car[]
                 {
                 new Car{Brand="Mercedes",Model="C200cdi", RentFrom=DateTime.Parse("2005-09-01"),
-                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.Available, ImageUrl="non aviailbe", PlaceId=1051
+                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.Available, ImageUrl="https://i.ebayimg.com/images/g/MWIAAOSwqfNXif2~/s-l300.jpg", PlaceId=1051
                 },
                 new Car{Brand="Mercedes",Model="C220cdi", RentFrom=DateTime.Parse("2005-09-01"),
-                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.NonAvailable, ImageUrl="non aviailbe", PlaceId=1052
+                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.NonAvailable, ImageUrl="~/car_images/c220.jpg", PlaceId=1052
                 },
                 new Car{Brand="Mercedes",Model="C270cdi", RentFrom=DateTime.Parse("2005-09-01"),
-                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.Available, ImageUrl="non aviailbe", PlaceId=1053
+                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.Available, ImageUrl="~/car_images/c270.jpg", PlaceId=1053
                 },
                 new Car{Brand="Mercedes",Model="C320cdi", RentFrom=DateTime.Parse("2005-09-01"),
-                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.Available, ImageUrl="non aviailbe", PlaceId=1054
+                    RentTo =DateTime.Parse("2005-09-05"), IsTheCarAvailable=Models.Helpers.IsCarAvailable.Available, ImageUrl="~/car_images/c320.jpg", PlaceId=1054
                 }
                 };
             foreach (var car in cars)

@@ -17,3 +17,6 @@ C:\Users\emin.mandradzhi\Projects\RentACar\Models\obj\Debug\netcoreapp2.0\RentAC
 C:\Users\emin.mandradzhi\Projects\RentACar\Models\obj\Debug\netcoreapp2.0\RentACar.Models.csprojResolveAssemblyReference.cache
 C:\Users\emin.mandradzhi\Projects\RentACar\Models\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
 C:\Users\emin.mandradzhi\Projects\RentACar\Models\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb
+C:\Users\Емин\source\repos\RentACar\Models\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
+C:\Users\Емин\source\repos\RentACar\Models\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb
+C:\Users\Емин\source\repos\RentACar\Models\obj\Debug\netcoreapp2.0\RentACar.Models.csprojResolveAssemblyReference.cache

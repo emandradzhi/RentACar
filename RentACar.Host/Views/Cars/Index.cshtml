@@ -44,7 +44,7 @@
                     @Html.DisplayFor(modelItem => item.RentTo)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ImageUrl)
+                    <img src="@item.ImageUrl"; width="150" height="150" alt="Image of a car"/>
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.CarId">Edit</a> |
