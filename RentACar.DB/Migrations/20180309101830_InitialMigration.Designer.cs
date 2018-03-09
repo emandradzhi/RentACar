@@ -12,7 +12,7 @@ using System;
 namespace RentACar.DB.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20180308113352_InitialMigration")]
+    [Migration("20180309101830_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace RentACar.DB.Migrations
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<int>("IsCarAvailable");
+                    b.Property<int>("IsTheCarAvailable");
 
                     b.Property<string>("Model")
                         .IsRequired();

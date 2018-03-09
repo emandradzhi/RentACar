@@ -17,7 +17,7 @@ namespace RentACar.DB.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Brand = table.Column<string>(nullable: false),
                     ImageUrl = table.Column<string>(nullable: true),
-                    IsCarAvailable = table.Column<int>(nullable: false),
+                    IsTheCarAvailable = table.Column<int>(nullable: false),
                     Model = table.Column<string>(nullable: false),
                     PlaceId = table.Column<int>(nullable: true),
                     RentFrom = table.Column<DateTime>(nullable: false),

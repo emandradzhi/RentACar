@@ -31,7 +31,7 @@ namespace RentACar.DB.Migrations
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<int>("IsCarAvailable");
+                    b.Property<int>("IsTheCarAvailable");
 
                     b.Property<string>("Model")
                         .IsRequired();

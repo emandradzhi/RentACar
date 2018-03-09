@@ -1,6 +1,9 @@
 ﻿using RentACar.Models.Helpers;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RentACar.Models
 {
@@ -31,9 +34,19 @@ namespace RentACar.Models
         public string ImageUrl { get; set; }
 
         [Display(Name = "Availablity")]
-        public IsCarAvailable IsCarAvailable { get; set; }
+        public IsCarAvailable IsTheCarAvailable { get; set; }
 
         public int? PlaceId { get; set; }
+
+        [NotMapped]
+        public IEnumerable<SelectListItem> Available
+        {
+            get
+            {
+                yield return new SelectListItem {Value = "1", Text = IsCarAvailable.Available.ToString() };
+                yield return new SelectListItem {Value = "2", Text = IsCarAvailable.NonAvailable.ToString() };
+            }
+        }
 
     }
 }

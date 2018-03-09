@@ -28,3 +28,5 @@ C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.AssemblyInfo.cs
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.dll
 C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\obj\Debug\netcoreapp2.0\RentACar.Host.pdb
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Contracts.dll
+C:\Users\emin.mandradzhi\Projects\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Contracts.pdb
