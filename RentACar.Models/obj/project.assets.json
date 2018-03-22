@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Емин\\Code\\RentACar2\\RentACar.Models\\RentACar.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Емин\\Code\\RentACar\\RentACar.Models\\RentACar.Models.csproj",
       "projectName": "RentACar.Models",
-      "projectPath": "C:\\Users\\Емин\\Code\\RentACar2\\RentACar.Models\\RentACar.Models.csproj",
+      "projectPath": "C:\\Users\\Емин\\Code\\RentACar\\RentACar.Models\\RentACar.Models.csproj",
       "packagesPath": "C:\\Users\\Емин\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Емин\\Code\\RentACar2\\RentACar.Models\\obj\\",
+      "outputPath": "C:\\Users\\Емин\\Code\\RentACar\\RentACar.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
