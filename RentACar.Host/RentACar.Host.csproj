@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Models\RentACar.Models.csproj" />
-    <ProjectReference Include="..\RentACar.DB\RentACar.DB.csproj" />
+    <ProjectReference Include="..\RentACar.Data\RentACar.Data.csproj" />
+    <ProjectReference Include="..\RentACar.Managers\RentACar.Managers.csproj" />
   </ItemGroup>
 
 </Project>

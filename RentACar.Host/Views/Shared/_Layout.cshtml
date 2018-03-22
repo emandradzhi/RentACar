@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Rent a car</title>
+    <title>@ViewData["Title"] - RentACar.Host</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,15 +26,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Rent a car</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">RentACar.Host</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Cars" asp-action="Index">Cars</a></li>
-                    <li><a asp-area="" asp-controller="Users" asp-action="Index">Users</a></li>
                     <li><a asp-area="" asp-controller="Places" asp-action="Index">Places</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
+                    <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +47,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - Rent A Car</p>
+            <p>&copy; 2018 - RentACar.Host</p>
         </footer>
     </div>
 

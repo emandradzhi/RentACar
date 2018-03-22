@@ -1,4 +1,4 @@
-﻿@model RentACar.Models.Car
+﻿@model RentACar.Models.Car.Car
 
 @{
     ViewData["Title"] = "Details";
@@ -41,10 +41,10 @@
             @Html.DisplayFor(model => model.ImageUrl)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.IsCarAvailable)
+            @Html.DisplayNameFor(model => model.IsTheCarAvailable)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.IsCarAvailable)
+            @Html.DisplayFor(model => model.IsTheCarAvailable)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.PlaceId)

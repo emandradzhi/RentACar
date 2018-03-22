@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using RentACar.DB;
+using RentACar.Data;
 
 namespace RentACar.Host
 {
@@ -24,7 +24,7 @@ namespace RentACar.Host
                 try
                 {
                     var context = services.GetRequiredService<AppDbContext>();
-                    DbInitializer.Initialize(context);
+                    DbInitialiser.Initialize(context);
                 }
                 catch (Exception ex)
                 {
@@ -34,6 +34,7 @@ namespace RentACar.Host
             }
             host.Run();
         }
+
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()

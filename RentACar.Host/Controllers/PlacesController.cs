@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RentACar.DB;
-using RentACar.Models;
+using RentACar.Data;
+using RentACar.Models.Place;
 
 namespace RentACar.Host.Controllers
 {
@@ -82,7 +82,8 @@ namespace RentACar.Host.Controllers
         }
 
         // POST: Places/Edit/5
-       
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PlaceId,Name,Region,Country")] Place place)
