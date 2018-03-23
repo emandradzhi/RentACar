@@ -3,10 +3,8 @@ C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\RentAC
 C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\RentACar.Managers.pdb
 C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\RentACar.Data.dll
 C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\RentACar.Models.dll
-C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
 C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\RentACar.Data.pdb
 C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\RentACar.Models.pdb
-C:\Users\Емин\Code\RentACar\RentACar.Managers\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
 C:\Users\Емин\Code\RentACar\RentACar.Managers\obj\Debug\netcoreapp2.0\RentACar.Managers.csprojResolveAssemblyReference.cache
 C:\Users\Емин\Code\RentACar\RentACar.Managers\obj\Debug\netcoreapp2.0\RentACar.Managers.csproj.CoreCompileInputs.cache
 C:\Users\Емин\Code\RentACar\RentACar.Managers\obj\Debug\netcoreapp2.0\RentACar.Managers.AssemblyInfoInputs.cache

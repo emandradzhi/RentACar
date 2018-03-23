@@ -13,6 +13,7 @@ namespace RentACar.Models.User
         public User(string username, string password, string email, TypeOfUser typeOfUser, string phoneNumber, int? placeId, int? carId)
         {
             this.Username = username;
+            this.Password = password;
             this.Email = email;
             this.TypeOfUser = typeOfUser;
             this.PhoneNumber = phoneNumber;

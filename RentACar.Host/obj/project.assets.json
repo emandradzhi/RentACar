@@ -5030,6 +5030,16 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "RentACar.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RentACar.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RentACar.Common.dll": {}
+        }
+      },
       "RentACar.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -13145,6 +13155,11 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "RentACar.Common/1.0.0": {
+      "type": "project",
+      "path": "../RentACar.Common/RentACar.Common.csproj",
+      "msbuildProject": "../RentACar.Common/RentACar.Common.csproj"
+    },
     "RentACar.Data/1.0.0": {
       "type": "project",
       "path": "../RentACar.Data/RentACar.Data.csproj",
@@ -13166,6 +13181,7 @@
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
+      "RentACar.Common >= 1.0.0",
       "RentACar.Data >= 1.0.0",
       "RentACar.Managers >= 1.0.0"
     ]
@@ -13208,6 +13224,9 @@
             },
             "C:\\Users\\Емин\\Code\\RentACar\\RentACar.Data\\RentACar.Data.csproj": {
               "projectPath": "C:\\Users\\Емин\\Code\\RentACar\\RentACar.Data\\RentACar.Data.csproj"
+            },
+            "C:\\Users\\Емин\\Code\\RentACar\\RentACar.Common\\RentACar.Common.csproj": {
+              "projectPath": "C:\\Users\\Емин\\Code\\RentACar\\RentACar.Common\\RentACar.Common.csproj"
             }
           }
         }

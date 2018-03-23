@@ -51,14 +51,5 @@ namespace RentACar.Models.Car
 
         public int? PlaceId { get; set; }
 
-        [NotMapped]
-        public IEnumerable<SelectListItem> Available
-        {
-            get
-            {
-                yield return new SelectListItem { Value = "1", Text = IsCarAvailable.Available.ToString() };
-                yield return new SelectListItem { Value = "2", Text = IsCarAvailable.NonAvailable.ToString() };
-            }
-        }
     }
 }

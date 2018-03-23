@@ -15,3 +15,5 @@ C:\Users\Емин\Code\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.D
 C:\Users\Емин\Code\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Models.pdb
 C:\Users\Емин\Code\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Managers.dll
 C:\Users\Емин\Code\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Managers.pdb
+C:\Users\Емин\Code\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Common.dll
+C:\Users\Емин\Code\RentACar\RentACar.Host\bin\Debug\netcoreapp2.0\RentACar.Common.pdb

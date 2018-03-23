@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Manage";
+    var username = ViewData["Username"];
+    var typeOfuser = ViewData["TypeOfUser"];
+}
+
+<h4>@ViewData["Title"]</h4>
+<div class="row">
+    <div class="col-md-6">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <p>Hello @username.ToString()</p>
+        </div>
+        <div class="form-group">
+            <ul>
+                @if (typeOfuser.ToString() == "Admin")
+                {
+                <li>You are admin</li>
+                <li><a asp-area="" asp-controller="" asp-action="">Go to home</a></li>
+                }
+                <br />
+                @if (typeOfuser.ToString() == "Customer")
+                {
+                <li>You are customer</li>
+                <li><a asp-area="" asp-controller="" asp-action="">Go to home</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+    @section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
+
+

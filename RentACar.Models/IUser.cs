@@ -9,7 +9,7 @@ namespace RentACar.Models
     {
         Task RegisterAsync(RentACar.Models.User.User user);
         Task<RentACar.Models.User.User> GetUserByIdAsync(int id);
-        Task<RentACar.Models.User.User> GetUserByEmailAsync(string email);
+        Task<RentACar.Models.User.User> GetUserByUsernameAsync(string username);
         Task<List<RentACar.Models.User.User>> GetAllUsersAsync();
     }
 }
