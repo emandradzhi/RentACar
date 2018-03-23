@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using RentACar.Host.DTOs;
 using RentACar.Common;
 using RentACar.Host.Extensions;
+using RentACar.Models.User;
 
 namespace RentACar.Host.Controllers
 {
@@ -19,7 +20,7 @@ namespace RentACar.Host.Controllers
         private AppDbContext _context = new AppDbContext();
         private IUser _userManager = new UserManager();
 
-        
+
         public IActionResult Login()
         {
             return View();
@@ -29,25 +30,24 @@ namespace RentACar.Host.Controllers
             return View();
         }
 
-        // GET: Account/Details/5
         public IActionResult Welcome()
         {
             return View();
         }
 
-        // GET: Account/Create
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginEntryDto entry)
         {
             ViewData["WrongLogin"] = null;
-            if (entry.Username == null || entry.Password == null)
+
+            if (!ModelState.IsValid)
             {
                 ViewData["WrongLogin"] = "Incorrect form!";
                 return View();
             }
-            if (ModelState.IsValid)
+            else
             {
                 var user = await _userManager.GetUserByUsernameAsync(entry.Username);
                 if (user == null)
@@ -56,7 +56,7 @@ namespace RentACar.Host.Controllers
                     {
                         ViewData["WrongLogin"] = "Incorrect username or password!";
                         return View(entry);
-                       
+
                     }
                 }
                 HttpContext.Session.SetObjectAsJson<int>("UserId", user.UserId);
@@ -65,10 +65,30 @@ namespace RentACar.Host.Controllers
 
             }
 
-            
+
             return RedirectToAction("Index", "Manage");
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterEntryDto entry)
+        {
+            if (!ModelState.IsValid)
+            {
 
+            }
+            else
+            {
+                string password = HashUtils.CreateHashCode(entry.Password);
+
+                User nUser = new User(entry.Username, password, entry.Email, entry.TypeOfUser, entry.PhoneNumber);
+
+                await _userManager.RegisterAsync(nUser);
+
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

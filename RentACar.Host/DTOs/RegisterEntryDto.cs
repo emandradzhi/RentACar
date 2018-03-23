@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentACar.Models.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,5 +20,13 @@ namespace RentACar.Host.DTOs
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Type of user")]
+        public TypeOfUser TypeOfUser { get; set; }
+
+        [Required]
+        [Phone]
+        public string PhoneNumber { get; set; }
     }
 }
