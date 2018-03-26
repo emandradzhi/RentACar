@@ -26,5 +26,9 @@ namespace RentACar.Host.Controllers
             ViewData["TypeOfUser"] = _typeOfUser;
             return View();
         }
+        public IActionResult WrongLogin()
+        {
+            return View();
+        }
     }
 }

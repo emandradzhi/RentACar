@@ -44,28 +44,26 @@ namespace RentACar.Host.Controllers
 
             if (!ModelState.IsValid)
             {
-                ViewData["WrongLogin"] = "Incorrect form!";
+                ViewData["WrongLogin"] = "Field cannot be empty!";
                 return View();
             }
             else
             {
-                var user = await _userManager.GetUserByUsernameAsync(entry.Username);
-                if (user == null)
+                var user = await _userManager.GetUserByEmailAsync(entry.Email);
+                if (user == null || !HashUtils.VerifyPassword(entry.Password, user.Password))
                 {
-                    if (!HashUtils.VerifyPassword(entry.Password, user.Password))
-                    {
-                        ViewData["WrongLogin"] = "Incorrect username or password!";
-                        return View(entry);
-
-                    }
+                    ViewData["WrongLogin"] = "Incorrect email or password!";
+                    return View();
                 }
-                HttpContext.Session.SetObjectAsJson<int>("UserId", user.UserId);
-                HttpContext.Session.SetObjectAsJson<string>("UserName", user.Username);
-                HttpContext.Session.SetObjectAsJson("TypeOfUser", user.TypeOfUser);
-
+                else
+                {
+                    HttpContext.Session.SetObjectAsJson<int>("UserId", user.UserId);
+                    HttpContext.Session.SetObjectAsJson<string>("UserName", user.Username);
+                    HttpContext.Session.SetObjectAsJson("TypeOfUser", user.TypeOfUser);
+                }
+                
             }
-
-
+            
             return RedirectToAction("Index", "Manage");
         }
 
@@ -80,15 +78,23 @@ namespace RentACar.Host.Controllers
             }
             else
             {
+               
                 string password = HashUtils.CreateHashCode(entry.Password);
 
                 User nUser = new User(entry.Username, password, entry.Email, entry.TypeOfUser, entry.PhoneNumber);
 
                 await _userManager.RegisterAsync(nUser);
-
             }
-
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetObjectAsJson<string>("UserId", null);
+            HttpContext.Session.SetObjectAsJson<string>("UserName", null);
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
     }
 }

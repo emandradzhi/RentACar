@@ -23,9 +23,9 @@ namespace RentACar.Managers
             return await _contex.Users.ToListAsync();
         }
 
-        public async Task<User> GetUserByUsernameAsync(string username)
+        public async Task<User> GetUserByEmailAsync(string email)
         {
-            return await _contex.Users.FirstOrDefaultAsync(u => u.Username == username);
+            return await _contex.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
 
         public async Task<User> GetUserByIdAsync(int id)
