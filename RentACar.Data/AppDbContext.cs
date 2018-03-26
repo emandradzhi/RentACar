@@ -11,7 +11,7 @@ namespace RentACar.Data
 
         public AppDbContext()
         {
-            this.connection = "Server=ЕМИН-PC\\SQLEXPRESS;Database=RentACar;Trusted_Connection=True;MultipleActiveResultSets=true";
+            this.connection = "";
         }
 
         public DbSet<RentACar.Models.Car.Car> Cars { get; set; }

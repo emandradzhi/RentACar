@@ -7,45 +7,59 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RentACar.Data;
 using RentACar.Models.Car;
+using Microsoft.AspNetCore.Authorization;
+using RentACar.Host.Extensions;
+using RentACar.Models;
+using RentACar.Managers;
 
 namespace RentACar.Host.Controllers
 {
     public class CarsController : Controller
     {
         private readonly AppDbContext _context;
+        private IUser _userManager = new UserManager();
 
         public CarsController(AppDbContext context)
         {
             _context = context;
         }
-
-        // GET: Cars
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cars.ToListAsync());
+            if (Authorize())
+            {
+                return View(await _context.Cars.ToListAsync());
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
-
-        // GET: Cars/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (Authorize())
+            { 
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var car = await _context.Cars
-                .SingleOrDefaultAsync(m => m.CarId == id);
-            if (car == null)
-            {
-                return NotFound();
-            }
+                var car = await _context.Cars
+                    .SingleOrDefaultAsync(m => m.CarId == id);
+                if (car == null)
+                {
+                    return NotFound();
+                }
 
-            return View(car);
+                return View(car);
+            }
+            else
+            {
+                return RedirectToAction("Login","Account");
+            }
         }
-
-        // GET: Cars/Create
         public IActionResult Create()
         {
+
             return View();
         }
 
@@ -56,19 +70,27 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsTheCarAvailable,PlaceId")] Car car)
         {
-            if (ModelState.IsValid)
+            if (Authorize())
             {
-                _context.Add(car);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(car);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(car);
             }
-            return View(car);
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
-
-        // GET: Cars/Edit/5
+       
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
+            if (Authorize())
+            {
+                if (id == null)
             {
                 return NotFound();
             }
@@ -79,6 +101,11 @@ namespace RentACar.Host.Controllers
                 return NotFound();
             }
             return View(car);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         // POST: Cars/Edit/5
@@ -88,50 +115,64 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsTheCarAvailable,PlaceId")] Car car)
         {
-            if (id != car.CarId)
+            if (Authorize())
             {
-                return NotFound();
-            }
+                if (id != car.CarId)
+                {
+                    return NotFound();
+                }
 
-            if (ModelState.IsValid)
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        _context.Update(car);
+                        await _context.SaveChangesAsync();
+                    }
+                    catch (DbUpdateConcurrencyException)
+                    {
+                        if (!CarExists(car.CarId))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
+                    }
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(car);
+                }
+            else
             {
-                try
-                {
-                    _context.Update(car);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CarExists(car.CarId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Login", "Account");
             }
-            return View(car);
         }
 
         // GET: Cars/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
+            if (Authorize())
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var car = await _context.Cars
-                .SingleOrDefaultAsync(m => m.CarId == id);
-            if (car == null)
+                var car = await _context.Cars
+                    .SingleOrDefaultAsync(m => m.CarId == id);
+                if (car == null)
+                {
+                    return NotFound();
+                }
+
+                return View(car);
+            }
+            else
             {
-                return NotFound();
+                return RedirectToAction("Login", "Account");
             }
-
-            return View(car);
         }
 
         // POST: Cars/Delete/5
@@ -139,15 +180,31 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (Authorize())
+            {
             var car = await _context.Cars.SingleOrDefaultAsync(m => m.CarId == id);
             _context.Cars.Remove(car);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         private bool CarExists(int id)
         {
             return _context.Cars.Any(e => e.CarId == id);
+        }
+
+        public bool Authorize()
+        {
+            var _userId = HttpContext.Session.GetObjectFromJson<int>("UserId");
+            if (_userId == 0)
+                return false;
+            else
+                return true;
         }
     }
 }

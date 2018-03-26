@@ -1,0 +1,9 @@
+C:\Users\Емин\Code\RentACar\RentACar.Common\bin\Release\netcoreapp2.0\RentACar.Common.deps.json
+C:\Users\Емин\Code\RentACar\RentACar.Common\bin\Release\netcoreapp2.0\RentACar.Common.dll
+C:\Users\Емин\Code\RentACar\RentACar.Common\bin\Release\netcoreapp2.0\RentACar.Common.pdb
+C:\Users\Емин\Code\RentACar\RentACar.Common\obj\Release\netcoreapp2.0\RentACar.Common.csprojResolveAssemblyReference.cache
+C:\Users\Емин\Code\RentACar\RentACar.Common\obj\Release\netcoreapp2.0\RentACar.Common.csproj.CoreCompileInputs.cache
+C:\Users\Емин\Code\RentACar\RentACar.Common\obj\Release\netcoreapp2.0\RentACar.Common.AssemblyInfoInputs.cache
+C:\Users\Емин\Code\RentACar\RentACar.Common\obj\Release\netcoreapp2.0\RentACar.Common.AssemblyInfo.cs
+C:\Users\Емин\Code\RentACar\RentACar.Common\obj\Release\netcoreapp2.0\RentACar.Common.dll
+C:\Users\Емин\Code\RentACar\RentACar.Common\obj\Release\netcoreapp2.0\RentACar.Common.pdb
