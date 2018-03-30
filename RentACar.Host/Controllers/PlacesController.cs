@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RentACar.Data;
 using RentACar.Models.Place;
 using RentACar.Host.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace RentACar.Host.Controllers
 {
@@ -24,34 +25,54 @@ namespace RentACar.Host.Controllers
         public async Task<IActionResult> Index()
         {
             ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            return View(await _context.Places.ToListAsync());
+            if (Authorize())
+            {
+                return View(await _context.Places.ToListAsync());
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         // GET: Places/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            if (id == null)
+            if (Authorize())
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var place = await _context.Places
-                .SingleOrDefaultAsync(m => m.PlaceId == id);
-            if (place == null)
+                var place = await _context.Places
+                    .SingleOrDefaultAsync(m => m.PlaceId == id);
+                if (place == null)
+                {
+                    return NotFound();
+                }
+
+                return View(place);
+            }
+            else
             {
-                return NotFound();
+                return RedirectToAction("Login", "Account");
             }
-
-            return View(place);
         }
 
         // GET: Places/Create
         public IActionResult Create()
         {
-
-            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            return View();
+            if (Authorize())
+            {
+                ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         // POST: Places/Create
@@ -61,14 +82,21 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PlaceId,Name,Region,Country")] Place place)
         {
-            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            if (ModelState.IsValid)
+            if (Authorize())
             {
-                _context.Add(place);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
+                if (ModelState.IsValid)
+                {
+                    _context.Add(place);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(place);
             }
-            return View(place);
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         // GET: Places/Edit/5
@@ -76,17 +104,24 @@ namespace RentACar.Host.Controllers
         {
 
             ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            if (id == null)
+            if (Authorize())
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var place = await _context.Places.SingleOrDefaultAsync(m => m.PlaceId == id);
-            if (place == null)
-            {
-                return NotFound();
+                var place = await _context.Places.SingleOrDefaultAsync(m => m.PlaceId == id);
+                if (place == null)
+                {
+                    return NotFound();
+                }
+                return View(place);
             }
-            return View(place);
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         // POST: Places/Edit/5
@@ -98,32 +133,39 @@ namespace RentACar.Host.Controllers
         {
 
             ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            if (id != place.PlaceId)
+            if (Authorize())
             {
-                return NotFound();
-            }
+                if (id != place.PlaceId)
+                {
+                    return NotFound();
+                }
 
-            if (ModelState.IsValid)
-            {
-                try
+                if (ModelState.IsValid)
                 {
-                    _context.Update(place);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PlaceExists(place.PlaceId))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(place);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!PlaceExists(place.PlaceId))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
+                return View(place);
             }
-            return View(place);
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         // GET: Places/Delete/5
@@ -131,20 +173,29 @@ namespace RentACar.Host.Controllers
         {
 
             ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            if (id == null)
+            if (Authorize())
             {
-                return NotFound();
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                var place = await _context.Places
+                    .SingleOrDefaultAsync(m => m.PlaceId == id);
+                if (place == null)
+                {
+                    return NotFound();
+                }
+
+                return View(place);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
             }
 
-            var place = await _context.Places
-                .SingleOrDefaultAsync(m => m.PlaceId == id);
-            if (place == null)
-            {
-                return NotFound();
-            }
-
-            return View(place);
         }
+
 
         // POST: Places/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -152,16 +203,31 @@ namespace RentACar.Host.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
-            var place = await _context.Places.SingleOrDefaultAsync(m => m.PlaceId == id);
-            _context.Places.Remove(place);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            if (Authorize())
+            {
+                var place = await _context.Places.SingleOrDefaultAsync(m => m.PlaceId == id);
+                _context.Places.Remove(place);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         private bool PlaceExists(int id)
         {
-            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             return _context.Places.Any(e => e.PlaceId == id);
+        }
+
+        private bool Authorize()
+        {
+            var _userId = HttpContext.Session.GetObjectFromJson<int>("UserId");
+            if (_userId == 0)
+                return false;
+            else
+                return true;
         }
     }
 }

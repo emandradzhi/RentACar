@@ -8,4 +8,3 @@ C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar
 C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.AssemblyInfo.cs
 C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.dll
 C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.pdb
-C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.csprojResolveAssemblyReference.cache

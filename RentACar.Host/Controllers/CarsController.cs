@@ -207,7 +207,7 @@ namespace RentACar.Host.Controllers
             return _context.Cars.Any(e => e.CarId == id);
         }
 
-        public bool Authorize()
+        private bool Authorize()
         {
             var _userId = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (_userId == 0)

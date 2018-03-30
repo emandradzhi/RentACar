@@ -81,7 +81,7 @@ namespace RentACar.Host.Controllers
                
                 string password = HashUtils.CreateHashCode(entry.Password);
 
-                User nUser = new User(entry.Username, password, entry.Email, entry.TypeOfUser, entry.PhoneNumber);
+                User nUser = new User(entry.Username, password, entry.Email, RentACar.Models.Helpers.TypeOfUser.Customer, entry.PhoneNumber);
 
                 await _userManager.RegisterAsync(nUser);
             }
