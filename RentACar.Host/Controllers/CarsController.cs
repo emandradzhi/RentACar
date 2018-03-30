@@ -25,6 +25,7 @@ namespace RentACar.Host.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (Authorize())
             {
                 return View(await _context.Cars.ToListAsync());
@@ -36,6 +37,7 @@ namespace RentACar.Host.Controllers
         }
         public async Task<IActionResult> Details(int? id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (Authorize())
             { 
                 if (id == null)
@@ -59,6 +61,7 @@ namespace RentACar.Host.Controllers
         }
         public IActionResult Create()
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
 
             return View();
         }
@@ -70,6 +73,7 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsTheCarAvailable,PlaceId")] Car car)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (Authorize())
             {
                 if (ModelState.IsValid)
@@ -88,6 +92,7 @@ namespace RentACar.Host.Controllers
        
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (Authorize())
             {
                 if (id == null)
@@ -115,6 +120,7 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CarId,Brand,Model,RentFrom,RentTo,ImageUrl,IsTheCarAvailable,PlaceId")] Car car)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (Authorize())
             {
                 if (id != car.CarId)
@@ -153,6 +159,7 @@ namespace RentACar.Host.Controllers
         // GET: Cars/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (Authorize())
             {
                 if (id == null)
@@ -180,6 +187,7 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (Authorize())
             {
             var car = await _context.Cars.SingleOrDefaultAsync(m => m.CarId == id);
@@ -195,6 +203,7 @@ namespace RentACar.Host.Controllers
 
         private bool CarExists(int id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             return _context.Cars.Any(e => e.CarId == id);
         }
 

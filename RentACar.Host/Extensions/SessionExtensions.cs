@@ -13,7 +13,7 @@ namespace RentACar.Host.Extensions
         public static T GetObjectFromJson<T>(this ISession session, string key)
         {
             var value = session.GetString(key);
-            if (value == null) return default(T);
+            if (value == null || value == "null") return default(T);
             return JsonConvert.DeserializeObject<T>(value);
         }
     }

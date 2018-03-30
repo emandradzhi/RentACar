@@ -1,5 +1,12 @@
-﻿
-@if (ViewData["UserId"] != null)
+﻿@{ 
+    bool isSingIn = false;
+    if (ViewData["UserId"] != null && ViewData["UserId"].ToString() != "0")
+    {
+        isSingIn = true;
+    }
+}
+
+@if (isSingIn)
 {
 
     <ul class="nav navbar-nav">

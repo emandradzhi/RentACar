@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RentACar.Data;
 using RentACar.Models.Place;
+using RentACar.Host.Extensions;
 
 namespace RentACar.Host.Controllers
 {
@@ -22,12 +23,14 @@ namespace RentACar.Host.Controllers
         // GET: Places
         public async Task<IActionResult> Index()
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             return View(await _context.Places.ToListAsync());
         }
 
         // GET: Places/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (id == null)
             {
                 return NotFound();
@@ -46,6 +49,8 @@ namespace RentACar.Host.Controllers
         // GET: Places/Create
         public IActionResult Create()
         {
+
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             return View();
         }
 
@@ -56,6 +61,7 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PlaceId,Name,Region,Country")] Place place)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (ModelState.IsValid)
             {
                 _context.Add(place);
@@ -68,6 +74,8 @@ namespace RentACar.Host.Controllers
         // GET: Places/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (id == null)
             {
                 return NotFound();
@@ -88,6 +96,8 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PlaceId,Name,Region,Country")] Place place)
         {
+
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (id != place.PlaceId)
             {
                 return NotFound();
@@ -119,6 +129,8 @@ namespace RentACar.Host.Controllers
         // GET: Places/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (id == null)
             {
                 return NotFound();
@@ -139,6 +151,7 @@ namespace RentACar.Host.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             var place = await _context.Places.SingleOrDefaultAsync(m => m.PlaceId == id);
             _context.Places.Remove(place);
             await _context.SaveChangesAsync();
@@ -147,6 +160,7 @@ namespace RentACar.Host.Controllers
 
         private bool PlaceExists(int id)
         {
+            ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             return _context.Places.Any(e => e.PlaceId == id);
         }
     }

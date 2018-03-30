@@ -41,7 +41,7 @@ namespace RentACar.Host.Controllers
         public async Task<IActionResult> Login(LoginEntryDto entry)
         {
             ViewData["WrongLogin"] = null;
-
+            //ViewData["UserId"] = HttpContext.Session.GetObjectFromJson<int>("UserId");
             if (!ModelState.IsValid)
             {
                 ViewData["WrongLogin"] = "Field cannot be empty!";
