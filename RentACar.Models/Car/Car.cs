@@ -1,13 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using RentACar.Models.Helpers;
+﻿using RentACar.Models.Helpers;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RentACar.Models.Car
 {
-    public class Car
+	public class Car
     {
         public Car()
         {

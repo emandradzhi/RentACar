@@ -8,3 +8,12 @@ C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar
 C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.AssemblyInfo.cs
 C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.dll
 C:\Users\Емин\Code\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.pdb
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.csprojAssemblyReference.cache
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.csproj.CoreCompileInputs.cache
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.AssemblyInfoInputs.cache
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.AssemblyInfo.cs
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.dll
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\obj\Debug\netcoreapp2.0\RentACar.Models.pdb
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\bin\Debug\netcoreapp2.0\RentACar.Models.deps.json
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\bin\Debug\netcoreapp2.0\RentACar.Models.dll
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Models\bin\Debug\netcoreapp2.0\RentACar.Models.pdb

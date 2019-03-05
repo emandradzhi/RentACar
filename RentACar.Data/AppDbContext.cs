@@ -11,7 +11,7 @@ namespace RentACar.Data
 
         public AppDbContext()
         {
-            this.connection = "";
+            this.connection = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=RentACar;Integrated Security=True;MultipleActiveResultSets=true;";
         }
 
         public DbSet<RentACar.Models.Car.Car> Cars { get; set; }

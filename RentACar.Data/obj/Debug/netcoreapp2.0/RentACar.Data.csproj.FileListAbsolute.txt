@@ -9,3 +9,15 @@ C:\Users\Емин\Code\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.D
 C:\Users\Емин\Code\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.AssemblyInfo.cs
 C:\Users\Емин\Code\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.dll
 C:\Users\Емин\Code\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.pdb
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\bin\Debug\netcoreapp2.0\RentACar.Data.deps.json
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\bin\Debug\netcoreapp2.0\RentACar.Data.dll
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\bin\Debug\netcoreapp2.0\RentACar.Data.pdb
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\bin\Debug\netcoreapp2.0\RentACar.Models.dll
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\bin\Debug\netcoreapp2.0\RentACar.Models.pdb
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.csprojAssemblyReference.cache
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.csproj.CoreCompileInputs.cache
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.AssemblyInfoInputs.cache
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.AssemblyInfo.cs
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.csproj.CopyComplete
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.dll
+C:\Users\emin.mandradzhi\Desktop\RentACar\RentACar.Data\obj\Debug\netcoreapp2.0\RentACar.Data.pdb
